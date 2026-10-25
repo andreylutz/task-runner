@@ -9,7 +9,7 @@ function ticketPrice(category) {
     default:
       return 0;
   }
-}
+};
 
 function maxTickets(budget, price) {
   if (price <= 0) {
@@ -22,11 +22,10 @@ function maxTickets(budget, price) {
   while (remainingBudget >= price) {
     remainingBudget -= price;
     count++;
-
-  }
+  };
 
   return count;
-}
+};
 
 function printTicketResult(category, budget) {
   const price = ticketPrice(category);
@@ -38,7 +37,7 @@ function printTicketResult(category, budget) {
 
   const count = maxTickets(budget, price);
   console.log(`Категория ${category}, билет ${price} руб., бюджет ${budget} руб.: можно купить ${count} шт.`);
-}
+};
 
 module.exports = {
   ticketPrice,
